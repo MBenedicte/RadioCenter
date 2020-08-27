@@ -1,0 +1,29 @@
+{
+  "name": "epicmail_v4",
+  "version": "1.0.0",
+  "description": "share mails with others",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBenedicte/epicmail_V4.git"
+  },
+  "author": "Benedicte Musabimana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MBenedicte/epicmail_V4/issues"
+  },
+  "homepage": "https://github.com/MBenedicte/epicmail_V4#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5"
+  }
+}
