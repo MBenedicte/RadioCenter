@@ -1,11 +1,17 @@
 import 'dotenv/config';
 import express from 'express';
+import api from './resourses/routes';
+import validationErrors from './resourses/middleware/validationErrors';
 import { OK, NOT_FOUND, SERVER_ERROR } from './constants/statusCodes';
 
 const app = express();
 
 app.use(express.urlencoded({ extended: false, limit: '3mb'}));
 app.use(express.json({ limit: '3mb'}));
+
+app.use('/api', api);
+
+app.use(validationErrors());
 
 app.get('/', (req, res)=> res.json({
     status: OK, 
