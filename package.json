@@ -18,11 +18,19 @@
   },
   "homepage": "https://github.com/MBenedicte/epicmail_V4#readme",
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@hapi/joi": "^17.0.0",
+    "celebrate": "^10.1.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5"
   }
