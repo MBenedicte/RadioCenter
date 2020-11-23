@@ -1,7 +1,7 @@
 import {Router} from 'express';
 import { celebrate }from 'celebrate';
-import { registerUser, checkUser} from '../controller/Users.Controller';
-import { createUserRule } from '../middleware/validations/users.Validator';
+import { registerUser, checkUser, login, checkUserExist} from '../controller/Users.Controller';
+import { createUserRule, loginUserRule } from '../middleware/validations/users.Validator';
 
 const router = Router();
 
@@ -12,5 +12,11 @@ celebrate({
 checkUser,
 registerUser);
 
+router.post('/users/login', 
+celebrate({
+    body: loginUserRule
+}),
+checkUserExist,
+login);
 
 export default router;
